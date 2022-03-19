@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import BurggerMenu from '../../../components/burgger-menu';
 
 import {
   MenuContainer,
@@ -18,7 +19,9 @@ const LandingPageMenu: FC = () => {
   return(
     <MenuContainer>
       <Logo>JT-Extreme</Logo>
-      <TogleNavbarButton onClick={() => togleNavbar()}>x</TogleNavbarButton>
+      <TogleNavbarButton onClick={() => togleNavbar()}>
+        <BurggerMenu changeShape={navbarIsOpen} />
+      </TogleNavbarButton>
       <NavbarWrapper>
         <Navbar isOpen={navbarIsOpen}>
           <Ul>

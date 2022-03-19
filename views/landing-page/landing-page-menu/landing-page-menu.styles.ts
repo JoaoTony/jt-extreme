@@ -57,6 +57,8 @@ export const TogleNavbarButton = styled.button`
   position: absolute;
   z-index: 1001;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 
   right: 15%;
 `

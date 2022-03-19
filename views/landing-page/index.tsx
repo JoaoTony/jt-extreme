@@ -6,7 +6,6 @@ import { Container } from  './landing-page.styles'
 const LandingPage: FC = () => (
   <Container>
     <LandingPageMenu />
-    <h1>Hello World!!!!!!s</h1>
   </Container>
 )
 
