@@ -24,7 +24,7 @@ const LandingPageMenu: FC = () => {
       <TogleNavbarButton onClick={() => togleNavbar()}>
         <BurggerMenu changeShape={!navbarIsOpen} />
       </TogleNavbarButton>
-      <NavbarWrapper>
+
         <Navbar isOpen={navbarIsOpen}>
           <Ul>
             <Li data-text="Home">Home</Li>
@@ -33,7 +33,7 @@ const LandingPageMenu: FC = () => {
             <Li data-text="Contact">Contact</Li>
           </Ul>
         </Navbar>
-      </NavbarWrapper>
+
     </MenuContainer>
   )
 }

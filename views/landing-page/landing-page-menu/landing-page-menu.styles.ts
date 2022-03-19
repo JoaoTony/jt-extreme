@@ -8,7 +8,7 @@ export const MenuContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  overflow-x: hidden !important;
   z-index: 200;
 
   background-color: ${DEFUALT_COLORS.white01};
@@ -22,7 +22,7 @@ export const Logo = styled.h1`
 `
 
 export const NavbarWrapper = styled.div`
-  width: 100%;
+  width: 0;
   height: 100vh;
 
   position: absolute;
@@ -31,12 +31,14 @@ export const NavbarWrapper = styled.div`
 
   background: transparent;
   overflow: hidden;
-  z-index: -1;
+  z-index: -1 !important;
+
+  background: red;
 `;
 
 export const Navbar = styled.nav<{ isOpen: boolean}>`
   width: 100%;
-  height: 100% !important;
+  height: 100vh !important;
 
   display: flex;
   flex-direction: column;
@@ -44,6 +46,12 @@ export const Navbar = styled.nav<{ isOpen: boolean}>`
   justify-content: center;
   background-color: ${DEFUALT_COLORS.black01};
   overflow: hidden;
+
+  position: absolute;
+  z-index: 2000;
+  right: 0 !important;
+  align-self: flex-end;
+  top: 0;
 
   transition: all 0.5s ease;
   transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(100%)'};
@@ -55,7 +63,7 @@ export const TogleNavbarButton = styled.button`
   height: 40px;
 
   position: absolute;
-  z-index: 1001;
+  z-index: 2001;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -74,7 +82,7 @@ export const Li = styled.li`
 
   cursor: pointer;
   position: relative;
-  display: block;
+  display: flex;
   transition: 0.5s;
 
   -webkit-text-stroke: 1px ${DEFUALT_COLORS.white01};

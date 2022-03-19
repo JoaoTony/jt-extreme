@@ -21,6 +21,8 @@ export const Bar = styled.div<{ changeShape: boolean}>`
   position: relative;
   transition: all ease 0.5s;
 
+  overflow-x: visible;
+
   :before {
     content: '';
     position: absolute;
