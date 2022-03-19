@@ -3,19 +3,62 @@ import { DEFUALT_COLORS } from '../../../config/themes/default-colors';
 
 export const MenuContainer = styled.nav`
   width: 100%;
-  height: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 200;
+
+  background-color: ${DEFUALT_COLORS.white01};
+`
+
+export const Logo = styled.h1`
+  font-size: 34px;
+  font-weight: 900;
+  color: ${DEFUALT_COLORS.black01};
+  margin-left: 15%;
+`
+
+export const NavbarWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  background: transparent;
+  overflow: hidden;
+  z-index: -1;
+`;
+
+export const Navbar = styled.nav<{ isOpen: boolean}>`
+  width: 100%;
+  height: 100% !important;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: ${DEFUALT_COLORS.black01};
+  overflow: hidden;
+
+  transition: all 0.5s ease;
+  transform: ${({ isOpen }) => isOpen ? 'translateX(100%)' : 'translateX(0)'};
+
+`
+
+export const TogleNavbarButton = styled.button`
+  width: 40px;
+  height: 40px;
 
   position: absolute;
-  z-index: 1000;
-  left: 0;
-  top: 0;
+  z-index: 1001;
+  cursor: pointer;
 
-  background-color: ${DEFUALT_COLORS.black01};
+  right: 15%;
 `
 
 export const Ul = styled.ul`
@@ -27,6 +70,7 @@ export const Li = styled.li`
   color: transparent;
   list-style: none;
 
+  cursor: pointer;
   position: relative;
   display: block;
   transition: 0.5s;
