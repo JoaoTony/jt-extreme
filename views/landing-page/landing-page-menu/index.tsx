@@ -14,13 +14,15 @@ import {
 const LandingPageMenu: FC = () => {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
 
-  const togleNavbar = () => setNavbarIsOpen(!navbarIsOpen);
+  const togleNavbar = () => {
+    setNavbarIsOpen(!navbarIsOpen)
+  };
 
   return(
     <MenuContainer>
       <Logo>JT-Extreme</Logo>
       <TogleNavbarButton onClick={() => togleNavbar()}>
-        <BurggerMenu changeShape={navbarIsOpen} />
+        <BurggerMenu changeShape={!navbarIsOpen} />
       </TogleNavbarButton>
       <NavbarWrapper>
         <Navbar isOpen={navbarIsOpen}>

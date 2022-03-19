@@ -46,7 +46,7 @@ export const Navbar = styled.nav<{ isOpen: boolean}>`
   overflow: hidden;
 
   transition: all 0.5s ease;
-  transform: ${({ isOpen }) => isOpen ? 'translateX(100%)' : 'translateX(0)'};
+  transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(100%)'};
 
 `
 
